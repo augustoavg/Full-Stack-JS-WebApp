@@ -60,7 +60,6 @@ function Task(props) {
         if (props.match.params.id){
             await api.put(`task/${props.match.params.id}`, {
                 macAddress,
-                type,
                 done,
                 title,
                 description,
@@ -71,7 +70,6 @@ function Task(props) {
         }else {
             await api.post('/task', {
                 macAddress,
-                type,
                 title,
                 description,
                 when: `${date}T${hour}:00.000`

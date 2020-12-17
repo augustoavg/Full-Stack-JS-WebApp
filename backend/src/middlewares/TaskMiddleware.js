@@ -3,12 +3,10 @@ const { isPast } = require('date-fns');
 
 const TaskMiddleware = async(req, res, next) => {
   
-    const { macAddress, type, title, description, when } = req.body;
-
+    const { macAddress, title, description, when } = req.body;
+    
     if (!macAddress){
         return res.status(400).json({ error: 'Mac Address é obrigatório!' });
-    } else if (!type){
-        return res.status(400).json({ error: 'Tipo é obrigatório!' });
     } else if (!title){
         return res.status(400).json({ error: 'Title é obrigatório!' });
     } else if (!description){

@@ -10,7 +10,7 @@ const TaskSchema = new Schema({
 
     type: {
         type: Number,
-        required: true,
+        required: false,
     },
 
     title: {

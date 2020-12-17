@@ -22,13 +22,11 @@ function Header(props){
             <S.RightSide>
                 <Link to="/"> INÍCIO </Link>
                 <span className="divider"></span>
-
                 <Link to="/task"> NOVO AGENDAMENTO </Link>
                 <span className="divider"></span>
-
                 { !isConnected
                     ?
-                    <Link href="/qrcode"> SINCRONIZAR CELULAR </Link>
+                    <Link href="/"></Link>
                     :
                     <button type="button" onClick={ logout }>SAIR</button>
                 }
