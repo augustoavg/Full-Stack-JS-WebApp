@@ -37,8 +37,8 @@ export const QrCodeArea = styled.div`
 export const ValidationCode = styled.div`
     display:flex;
     flex-direction:column;
-    margin:10px;
-
+    margin:200px;
+    
     span{
         text-transform:uppercase;
         font-weight:bold;

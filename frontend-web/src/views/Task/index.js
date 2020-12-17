@@ -51,8 +51,6 @@ function Task(props) {
             return alert('Informar o título');
         } else if (!description){
             return alert('Informar a descrição');
-        } else if (!type){
-            return alert('Informar o tipo');
         } else if (!date){
             return alert('Informar a data');
         } else if (!hour){
@@ -98,7 +96,7 @@ function Task(props) {
         }
         lateVerify();
         loadTaskDetail();
-    }, []);
+    }, [loadTaskDetail]);
 
     return (
         <S.Container>
@@ -106,25 +104,12 @@ function Task(props) {
             <Header lateCount={ lateCount }/>
 
             <S.Form>
-                <S.TypeIcons>
-                    {
-                        TypeIcons.map ( (icon, index) => (
-                            index > 0 &&
-                            <button type='button' onClick={ () => setType(index) }>
-                            <img src={ icon }
-                                alt="Ícone"
-                                className={ type && type != index && 'inative' }
-                            />
-                            </button>
-                        ))
-                    }
-                </S.TypeIcons>
 
                 <S.Input>
                     <span> Título </span>
                     <input
                         type="text"
-                        placeholder="Título da tarefa"
+                        placeholder="Título de agendamento"
                         onChange={ e => setTitle(e.target.value) }
                         value={ title }
                     />

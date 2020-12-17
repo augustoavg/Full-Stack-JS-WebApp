@@ -14,7 +14,7 @@ function QrCode() {
 
     async function saveMac(){
         if(!mac){
-            alert('Informe o Mac Address');
+            alert('Informe o número do celular.');
         }else{
             await localStorage.setItem('@ToDoAPP/mac_address', mac);
             setRedirect(true);
@@ -28,18 +28,11 @@ function QrCode() {
             { redirect && <Redirect to="/" /> }
             <Header />
 
-            <S.Content>
-                <h1> Capture o QR Code </h1>
-                <p> suas atividades serão sincronizadas com a do seu celular </p>
-                <S.QrCodeArea>
-                    <Qr value="getmacaddress" size={350} />
-                </S.QrCodeArea>
-            </S.Content>
-
             <S.ValidationCode>
-                <span> Digite o código que apareceu no seu celular </span>
+                <span align="center"> Informe seu celular </span>
+                <h1></h1>
                 <input type="text" onChange={ e => setMac(e.target.value) } value={ mac } />
-                <button type="button" onClick={ saveMac }> Sincronizar </button>
+                <button type="button" onClick={ saveMac }> Continuar </button>
             </S.ValidationCode>
 
             <Footer />

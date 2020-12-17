@@ -23,7 +23,7 @@ function Header(props){
                 <Link to="/"> INÍCIO </Link>
                 <span className="divider"></span>
 
-                <Link to="/task"> NOVA TAREFA </Link>
+                <Link to="/task"> NOVO AGENDAMENTO </Link>
                 <span className="divider"></span>
 
                 { !isConnected

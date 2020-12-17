@@ -10,6 +10,6 @@ server.use(cors());
 const taskRouter = require('./routes/TaskRouter');
 server.use('/task', taskRouter);
 
-server.listen(process.env.PORT, () => {
-    console.log(`Server rodando na porta ${process.env.PORT}`)
+server.listen(3000, () => {
+    console.log(`Server rodando na porta 3000`)
 });
